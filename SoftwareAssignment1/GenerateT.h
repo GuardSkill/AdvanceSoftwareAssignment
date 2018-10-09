@@ -25,3 +25,5 @@ class MaxVarianceT:public GenerateT                //最大类间方差法
 public:
 	int GenerateMethod();
 };
+
+
