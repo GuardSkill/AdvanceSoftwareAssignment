@@ -5,3 +5,8 @@
 
 ## 使用
 请使用VS2017打开解决方案，或者进入分目录，使用其他版本的vs建立一个空项目，将.cpp和.h文件都包含到项目里。
+使用前请配置OPENCV的环境变量。
+
+## OPECNV环境变量配置：
+新建 Windows 环境变量：
+ OPENCV_DIR D:\OpenCV\Build\x86\vc10 
