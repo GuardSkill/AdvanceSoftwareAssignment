@@ -28,7 +28,7 @@ public:
 			{
 				for (int k = 0; k < img.channels(); k++)
 				{
-					img.at<Vec3b>(i, j)[k]=data.at(t);
+					img.at<Vec3b>(i, j)[k]=data[t];
 					t++;
 				}
 			}
@@ -36,7 +36,7 @@ public:
 		imshow("Display", img);
 		waitKey(500);
 	};           
-	void getData()                   //获取数据集
+	void loadData()                   //获取数据集
 	{
 		char name[256] = "123.jpg";
 		//cout << "请输入文件名（默认请输入123.jpg）";
@@ -75,7 +75,7 @@ public:
 			{
 				for (int k = 0; k < img.channels(); k++)
 				{
-					img.at<Vec3b>(i, j)[k] = data.at(t);
+					img.at<Vec3b>(i, j)[k] = data[t];
 					t++;
 				}
 			}
@@ -83,6 +83,10 @@ public:
 		imwrite("save.jpg", img);
 		img.release();
 	};
+	vector<int>& getData()                   //获取数据集
+	{
+		return  data;
+	}
 	~Data() 
 	{
 		if (!img.empty())

@@ -7,15 +7,15 @@ using namespace std;
 class GenerateT                                //阈值计算方式的父类
 {
 public:
-	virtual int GenerateMethod() { return -1; };
+	virtual int GenerateMethod(vector<int> data) = 0;
 };
 
 class SelfSetT :public GenerateT                    //手动设置阈值方法
 {
 public:
-	int GenerateMethod();
+	int GenerateMethod(vector<int> data);
 };
-class IterateT:public GenerateT                    //迭代生成阈值的方法
+class IterateT :public GenerateT                    //迭代生成阈值的方法
 {
 public:
 	int GenerateMethod(vector<int> data);
@@ -23,7 +23,7 @@ public:
 class MaxVarianceT:public GenerateT                //最大类间方差法
 {
 public:
-	int GenerateMethod();
+	int GenerateMethod(vector<int> data);
 };
 
 
